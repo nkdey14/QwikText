@@ -46,38 +46,55 @@ export default function TextForm(props) {
   return (
     <>
       <div className="container my-3">
-        <h3>{props.heading}</h3>
-        <div className="mb-3">
+        <div
+          className="mb-3"
+          style={{ color: props.mode === "dark" ? "white" : "#042743" }}
+        >
+          <h3>{props.heading}</h3>
           <textarea
             className="form-control"
             id="myForm"
+            style={{
+              color: props.mode === "dark" ? "white" : "#042743",
+              backgroundColor: props.mode === "dark" ? "grey" : "white",
+            }}
             value={text}
             onChange={handleOnChange}
             rows="10"
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>
-          Convert to UpperCase
-        </button>
-        <button className="btn btn-primary mx-2" onClick={handleLwClick}>
-          Convert to LowerCase
-        </button>
-        <button className="btn btn-primary mx-2" onClick={handleCopyClick}>
-          CopyText
-        </button>
-        <button className="btn btn-primary mx-2" onClick={handleSpacesClick}>
-          Remove Extra Space
-        </button>
-        <button className="btn btn-primary mx-2" onClick={handleClearClick}>
-          Clear Text
-        </button>
+        <div
+          className="container"
+          style={{ color: props.mode === "dark" ? "white" : "#042743" }}
+        >
+          <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+            Convert to UpperCase
+          </button>
+          <button className="btn btn-primary mx-2" onClick={handleLwClick}>
+            Convert to LowerCase
+          </button>
+          <button className="btn btn-primary mx-2" onClick={handleCopyClick}>
+            CopyText
+          </button>
+          <button className="btn btn-primary mx-2" onClick={handleSpacesClick}>
+            Remove Extra Space
+          </button>
+          <button className="btn btn-primary mx-2" onClick={handleClearClick}>
+            Clear Text
+          </button>
+        </div>
       </div>
 
-      <div className="container">
+      <div
+        className="container"
+        style={{ color: props.mode === "dark" ? "white" : "#042743" }}
+      >
         <h3>Text Summary</h3>
         <p>
-          <strong>{text.split(" ").length}</strong> words and{" "}
-          <strong>{text.length}</strong> characters
+          <strong>
+            {text.split(/(\s+)/).filter((x) => x.trim().length > 0).length}
+          </strong>{" "}
+          words and <strong>{text.length}</strong> characters
         </p>
         <p>
           <strong>{0.008 * text.split(" ").length}</strong> minutes spent
