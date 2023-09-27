@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/QwikText/static/css/main.578f694e.css",
+    "main.js": "/QwikText/static/js/main.93e11d36.js",
+    "static/js/787.d3befce1.chunk.js": "/QwikText/static/js/787.d3befce1.chunk.js",
+    "index.html": "/QwikText/index.html",
+    "main.578f694e.css.map": "/QwikText/static/css/main.578f694e.css.map",
+    "main.93e11d36.js.map": "/QwikText/static/js/main.93e11d36.js.map",
+    "787.d3befce1.chunk.js.map": "/QwikText/static/js/787.d3befce1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.578f694e.css",
+    "static/js/main.93e11d36.js"
+  ]
+}
