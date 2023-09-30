@@ -37,33 +37,35 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Navbar
-          title="QwikText"
-          home="Home"
-          about="About"
-          mode={mode}
-          toggleMode={toggleMode}
-        />
-        <Alert alert={alert} />
-        {/* <Navbar /> */}
-        <div className="container">
-          <Routes>
-            <Route
+      {/* <Router> */}
+      <Navbar
+        title="QwikText"
+        home="Home"
+        about="About"
+        mode={mode}
+        toggleMode={toggleMode}
+      />
+      <Alert alert={alert} />
+      {/* <Navbar /> */}
+      <div className="container">
+        {/* <Routes> */}
+        {/* <Route
               exact
               path="/"
-              element={
-                <TextForm
-                  heading="Enter your text here"
-                  mode={mode}
-                  showAlert={showAlert}
-                />
-              }
-            />
-            <Route exact path="/about" element={<About mode={mode} />} />
-          </Routes>
-        </div>
-      </Router>
+              element={ */}
+        <TextForm
+          heading="Enter your text here"
+          mode={mode}
+          showAlert={showAlert}
+        />
+        {/* }
+            /> */}
+        {/* <Route exact path="/about" element={ 
+         <About mode={mode} /> 
+         } /> */}
+        {/* </Routes> */}
+      </div>
+      {/* </Router> */}
     </>
   );
 }
