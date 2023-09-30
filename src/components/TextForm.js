@@ -107,11 +107,15 @@ export default function TextForm(props) {
         <h4>Preview</h4>
         <p>{text.length > 0 ? text : "Please Enter Some text to Preview"}</p>
       </div>
-      <div className="container my-3">
+      <div
+        className={`container my-3 text-${
+          props.mode === "dark" ? "light" : "dark"
+        }`}
+      >
         <h6>
           Credits:
           <a href="https://www.linkedin.com/in/nitin-kumar-dey-49a92215b/">
-            Nitin Kumar Dey
+            &nbsp; Nitin Kumar Dey
           </a>
         </h6>
       </div>
