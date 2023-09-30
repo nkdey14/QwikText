@@ -12,6 +12,7 @@ export default function TextForm(props) {
   const handleUpClick = () => {
     let ucText = text.toUpperCase();
     setText(ucText);
+    props.showAlert("Converted to UpperCase!", "success");
   };
 
   // Converts text to LowerCase
@@ -19,6 +20,7 @@ export default function TextForm(props) {
   const handleLwClick = () => {
     let lcText = text.toLowerCase();
     setText(lcText);
+    props.showAlert("Converted to LowerCase!", "success");
   };
 
   // Copies text to clipboard
@@ -27,6 +29,7 @@ export default function TextForm(props) {
     let copyText = document.getElementById("myForm");
     copyText.select();
     navigator.clipboard.writeText(copyText.value);
+    props.showAlert("Copied to Clipboard!", "success");
   };
 
   // Removes Extra Spaces
@@ -34,6 +37,7 @@ export default function TextForm(props) {
   const handleSpacesClick = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("Extra Spaces Removed!", "success");
   };
 
   // Clears the text
@@ -41,6 +45,7 @@ export default function TextForm(props) {
   const handleClearClick = () => {
     let clrText = "";
     setText(clrText);
+    props.showAlert("Text Cleared!", "success");
   };
 
   return (
@@ -101,6 +106,14 @@ export default function TextForm(props) {
         </p>
         <h4>Preview</h4>
         <p>{text.length > 0 ? text : "Please Enter Some text to Preview"}</p>
+      </div>
+      <div className="container my-3">
+        <h6>
+          Credits:
+          <a href="https://www.linkedin.com/in/nitin-kumar-dey-49a92215b/">
+            Nitin Kumar Dey
+          </a>
+        </h6>
       </div>
     </>
   );
